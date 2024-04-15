@@ -5,14 +5,14 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 
 
 html {
     max-width: 100%;
-    overflow-x:hidden
+    overflow-x: hidden
 }
 
 body {
@@ -69,7 +69,7 @@ nav li {
     padding-bottom: 0;
     padding-right: 5%;
     align-items: flex-end;
-    
+
 }
 
 nav a {
@@ -111,6 +111,7 @@ nav a {
     white-space: nowrap;
     margin-bottom: 2.5%;
 }
+
 #feature h3 {
     margin: 0;
 }
@@ -120,6 +121,8 @@ nav a {
 }
 
 #feature .card {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0 2.5% 2.5% 2.5%;
 }
@@ -144,7 +147,7 @@ nav a {
 
 #behind-the-dough h2 {
     text-align: center;
-    
+
 }
 
 #testimonials {
@@ -216,7 +219,7 @@ nav a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px; 
+    border-radius: 10px 10px 0px 0px;
 }
 
 footer {
@@ -234,15 +237,15 @@ footer {
 
 @media (min-width: 768px) {
 
-    
+
 
     header {
-     height: 62PX;
-     min-width: 768px;
-     align-items: right;
-     margin-right: 0;
-     margin-left: 0;
-     
+        height: 62PX;
+        min-width: 768px;
+        align-items: right;
+        margin-right: 0;
+        margin-left: 0;
+
     }
 
     .logo {
@@ -258,15 +261,24 @@ footer {
     }
 
     #feature ul {
-      
+
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-     
+
     }
 
     #feature li:first-child {
         grid-column: span 1;
     }
+
+    #feature .card div:nth-of-type(2) {
+        margin-top: 1.5%;
+    }
+
+    .button {
+        padding: 1% 2% 1% 2%;
+    }
+
 
     .behind {
         display: flex;
@@ -282,9 +294,16 @@ footer {
         display: flex;
         justify-content: space-between;
     }
+
     .testimonials div {
         flex: 1;
         padding: 2.5%;
+    }
+
+    #try-it-with h2 {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 3%;
     }
 
     #try-it-with ul {
@@ -294,4 +313,83 @@ footer {
 
 }
 
-@media (min-width: 960px) {}
+@media (min-width: 960px) {
+
+    html {
+        max-width: 1200px;
+    }
+
+    body {
+        vertical-align: baseline;
+    }
+
+
+    header {
+        height: 62PX;
+        min-width: 960px;
+        align-items: right;
+        margin-right: 0;
+        margin-left: 0;
+
+    }
+
+    .logo {
+        width: 55%;
+        padding-left: 3.25%;
+    }
+
+    nav ul {
+        justify-content: end;
+        padding-right: 2.5%;
+        padding-left: 2.5%;
+        margin-right: 0;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: row;
+        max-height: 500px;
+    }
+
+    .card {
+        display: block;
+        width: min-content;
+        margin: auto;
+        padding-bottom: 100%;
+        align-self: stretch;
+
+    }
+
+    .card h1 {
+        margin-top: 5%;
+    }
+
+    .card p {
+        font-size: 0.80rem;
+        line-height: 1.7;
+
+    }
+
+    .card div {
+        min-width: 0;
+
+    }
+
+    .feature ul {
+        height: min-content;
+        max-width: 500px;
+    }
+
+    .feature ul li {
+        padding: 0;
+
+
+    }
+
+    #feature img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+        justify-items: center;
+    }
+}
