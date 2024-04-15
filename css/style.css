@@ -11,8 +11,11 @@
 
 
 html {
-    max-width: 100%;
-    overflow-x: hidden
+    display: flex;
+    max-width: 1200px;
+    overflow-x: hidden;
+    margin: auto;
+    
 }
 
 body {
