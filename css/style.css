@@ -2,12 +2,29 @@
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+html {
+    max-width: 100%;
+    overflow-x:hidden
+}
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: #fff;
     font-family: "Poppins", sans-serif;
-    margin: auto;
-    max-width: 1200px;
+    width: 90%;
+    height: 100%;
+    vertical-align: baseline;
 }
+
 
 h1 {
     font-size: 2.027rem;
@@ -22,32 +39,48 @@ h3 {
 }
 
 header {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 2.5%;
 }
 
 .logo {
-    flex: 10;
+    padding-left: 5%;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
 }
 
 nav ul {
     display: flex;
+    white-space: nowrap;
     list-style: none;
-    margin-right: 0;
-    justify-content: flex-end;
 }
 
 nav li {
-    justify-content: space-between;
-    padding: 10px;
+    justify-items: space-between;
+    padding-bottom: 0;
+    padding-right: 5%;
+    align-items: flex-end;
+    
 }
 
 nav a {
     text-decoration: none;
     color: #000;
-    font-size: 1.802rem;
+    font-size: 1.2rem;
+}
+
+#feature {
+    padding-top: 0;
+    margin: 0;
 }
 
 #feature ul {
@@ -56,6 +89,7 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
+    margin: 0;
 }
 
 #feature li:first-child {
@@ -74,7 +108,7 @@ nav a {
 }
 
 #feature .card {
-    margin: auto;
+    margin: 0;
     padding: 0 40px 40px 40px;
 }
 
@@ -90,17 +124,21 @@ nav a {
 
 #behind-the-dough {
     background-color: #f8fafc;
-    padding: 40px;
+    padding: 10%;
+    margin: 0;
+    width: 90%;
 }
 
 #behind-the-dough h2 {
     text-align: center;
+    
 }
 
 #testimonials {
     background-color: #000;
     color: #fff;
-    padding: 40px;
+    padding: 10%;
+    width: 90%;
 }
 
 #testimonials h2 {
@@ -119,6 +157,10 @@ nav a {
     font-style: italic;
 }
 
+#try-it-with {
+    width: 100%;
+}
+
 #try-it-with h2 {
     text-align: center;
     padding: 20px;
@@ -135,8 +177,18 @@ nav a {
 #try-it-with article {
     background-color: #f8fafc;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
+#try-it-with h3 {
+    text-align: center;
+    padding: 5%;
+}
+
+#try-it-with p {
+    padding-bottom: 10%;
+    text-align: center;
+}
 
 #try-it-with img {
     display: block;
@@ -144,6 +196,18 @@ nav a {
     height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px; 
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 0.7rem;
 }
 
 @media (min-width: 768px) {}
